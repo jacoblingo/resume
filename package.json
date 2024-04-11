@@ -1,0 +1,31 @@
+{
+  "name": "jacob-lingo-resume",
+  "version": "1.0.0",
+  "description": "Professional Resume Built with HTML & Tailwind.css",
+  "homepage": "https://github.com/jacoblingo/resume",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacoblingo/resume"
+  },
+  "bugs": {
+    "url": "https://github.com/jacoblingo/resume/issues"
+  },
+  "author": "Jacob Lingo <bluecuda@gmail.com>",
+  "scripts": {
+    "serve": "concurrently \"postcss ./tailwind.css -o docs/build.css --watch\"  \"live-server ./docs \"",
+    "build": "cross-env NODE_ENV=build postcss ./tailwind.css -o ./docs/build.css"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "6.0.0",
+    "cross-env": "7.0.3",
+    "cssnano": "5.0.0",
+    "live-server": "1.2.1",
+    "postcss": "^8.4.31",
+    "postcss-cli": "8.3.1",
+    "postcss-import": "12.0.1",
+    "tailwind-heropatterns": "^0.0.8",
+    "tailwindcss": "^3.3.5"
+  }
+}
