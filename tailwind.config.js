@@ -52,6 +52,7 @@ module.exports = {
         2.5: "10px", // 10px
         3.2: "0.8125rem", // 16px
         4.5: "1.125rem", // 8px
+        7.0: "1.75rem", // 28px
         11: "2.75rem", // 44px (once)
       },
       colors: {
