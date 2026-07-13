@@ -1,0 +1,47 @@
+---
+const projects = [
+  {
+    name: "Campaign Automation Platform",
+    description:
+      "End-to-end advertising automation serving traders across Meta, TikTok, DV360, and Trade Desk in 4+ global regions. Processes requests in 2 min 10 sec average with 99.5%+ uptime and full audit trail.",
+    tech: "Python, FastAPI, GCP, Terraform, Pub/Sub, BigQuery",
+    impact: "95% effort reduction, 2,700+ objects, 4 regions live",
+  },
+  {
+    name: "Data Platform & Database Migration",
+    description:
+      "Migrated enterprise data APIs from monolith to 4 independent CloudRun microservices. Led BigQuery → Spanner migration (40+ tables, 6,500 attributes, 320M consumer records at 99.9% match rate).",
+    tech: "CloudRun, Spanner, BigQuery, Pub/Sub, Composer (Airflow)",
+    impact: "$400K annual savings, zero-downtime migration",
+  },
+  {
+    name: "Self-Serve Infrastructure Platform",
+    description:
+      "Designed and implemented self-service Terraform workflow enabling teams to provision GCP infrastructure without cloud ops tickets. Established patterns adopted across multiple product teams.",
+    tech: "Terraform, GCP, GitHub Actions, CI/CD",
+    impact: "0 ops tickets, 75% faster provisioning",
+  },
+];
+---
+
+<section class="mb-5">
+  <h2 class="mb-3 text-xs font-bold uppercase tracking-widest text-gray-500">
+    Key Projects
+  </h2>
+  <div class="space-y-3">
+    {projects.map((project) => (
+      <article class="break-inside-avoid rounded-md border border-gray-100 bg-gray-50 p-3 print:border-gray-200 print:bg-white">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-3">
+          <h3 class="text-sm font-semibold text-gray-900">{project.name}</h3>
+          <span class="text-xs font-medium text-primary-700">{project.impact}</span>
+        </div>
+        <p class="mt-1 text-sm leading-relaxed text-gray-600">
+          {project.description}
+        </p>
+        <p class="mt-1 text-xs text-gray-500">
+          <span class="font-semibold">Tech:</span> {project.tech}
+        </p>
+      </article>
+    ))}
+  </div>
+</section>

@@ -1,7 +1,6 @@
-# Ignore these so they're not stored in source control
-.vscode
-/node_modules/
-package-lock.json
-/tmp/
-yarn.lock
-docs
+node_modules/
+dist/
+.astro/
+.DS_Store
+*.log
+impact_plan/

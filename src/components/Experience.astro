@@ -1,0 +1,50 @@
+---
+const jobs = [
+  {
+    title: "Senior Software Engineer",
+    company: "Procter & Gamble",
+    period: "Jun 2020 – Present",
+    bullets: [
+      "Served as lead engineer across 4 concurrent platform initiatives spanning campaign automation, data ingestion, and master data management, coordinating delivery across distributed teams in 4+ global regions",
+      "Architected campaign automation platform processing 217 trader requests into 2,700+ ad objects across Meta, TikTok, and DV360 — averaging 2 min 10 sec per request, a 95% reduction in manual effort",
+      "Decomposed monolithic services into 4 independent microservices on CloudRun, migrating from Kubernetes and standardizing on FastAPI with auto-generated OpenAPI documentation",
+      "Led orchestration platform migration (Composer 2 → 3), delivering $400K in annual cost savings while eliminating critical legacy technical debt",
+      "Pioneered self-serve Terraform approach eliminating cloud ops dependency — 0 tickets filed, 75% faster infrastructure provisioning, entirely self-service from day one",
+      "Raised code quality gate from 75% to 90% and maintained 93.5% coverage via GHAS with automated quality gates, code scanning, and dependency reviews",
+      "Championing AI-assisted development practices across the team — introduced AI code review and automated test generation tooling, improving review turnaround and reducing manual test authoring effort",
+    ],
+  },
+  {
+    title: "Software Development Intern — Global Cyber Security",
+    company: "Liberty Mutual",
+    period: "May 2019 – Aug 2019",
+    bullets: [
+      "Built Azure security automation for administrative credential management, enforcing non-persistent, monitored, and self-service privileged access across enterprise cloud environments",
+    ],
+  },
+];
+---
+
+<section class="mb-5">
+  <h2 class="mb-3 text-xs font-bold uppercase tracking-widest text-gray-500">
+    Experience
+  </h2>
+  <div class="space-y-4">
+    {jobs.map((job) => (
+      <article class="break-inside-avoid">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-3">
+          <h3 class="text-md font-semibold text-gray-900">{job.title}</h3>
+          <span class="text-sm text-gray-500">{job.period}</span>
+        </div>
+        <p class="text-sm font-medium text-gray-600">{job.company}</p>
+        <ul class="mt-1.5 space-y-1 pl-4">
+          {job.bullets.map((bullet) => (
+            <li class="relative text-sm leading-relaxed text-gray-700 before:absolute before:-left-3 before:top-[0.45em] before:h-1 before:w-1 before:rounded-full before:bg-gray-400 before:content-['']">
+              {bullet}
+            </li>
+          ))}
+        </ul>
+      </article>
+    ))}
+  </div>
+</section>

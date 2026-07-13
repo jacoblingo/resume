@@ -1,0 +1,64 @@
+---
+const skillGroups = [
+  {
+    category: "Languages",
+    skills: ["Python", "TypeScript", "SQL", "Java", "C", "C++", "C#"],
+  },
+  {
+    category: "Cloud & Data",
+    skills: [
+      "GCP (BigQuery, Spanner, CloudRun, Pub/Sub, Dataflow)",
+      "Cloud Functions",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+    ],
+  },
+  {
+    category: "AI & Automation",
+    skills: [
+      "GitHub Copilot",
+      "AI Code Review",
+      "LLM-Assisted Workflows",
+      "Prompt Engineering",
+    ],
+  },
+  {
+    category: "Frameworks",
+    skills: ["FastAPI", "React", "Vue.js", "Next.js", "Airflow / Composer"],
+  },
+  {
+    category: "DevOps",
+    skills: [
+      "GitHub Actions",
+      "CI/CD Pipelines",
+      "GitHub Advanced Security (GHAS)",
+      "OpenAPI / Swagger",
+      "Observability & Logging",
+      "Infrastructure as Code",
+    ],
+  },
+];
+---
+
+<section class="mb-5">
+  <h2 class="mb-3 text-xs font-bold uppercase tracking-widest text-gray-500">
+    Skills
+  </h2>
+  <div class="space-y-2">
+    {skillGroups.map((group) => (
+      <div class="flex flex-wrap items-baseline gap-x-2">
+        <span class="text-sm font-semibold text-gray-800 w-32 shrink-0">
+          {group.category}
+        </span>
+        <div class="flex flex-wrap gap-1.5">
+          {group.skills.map((skill) => (
+            <span class="rounded bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-700 print:border print:border-gray-300 print:bg-white">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

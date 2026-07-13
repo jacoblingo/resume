@@ -1,18 +1,28 @@
 # Jacob Lingo's Resume
 
-This is my repository housing my personal resume!
+Personal resume built with [Astro](https://astro.build) and Tailwind CSS. Deployed automatically to GitHub Pages via GitHub Actions.
 
-I am a experienced full-stack backend software engineer with a strong track record of independently addressing complex business
-requirements and overcoming challenges to deliver complete and robust solutions.
+## Quick Start
 
-
-
-## How to run
-Install the dependencies:
-
+```bash
+npm install
+npm run dev
 ```
-yarn install
-```
+
+Open http://localhost:4321/resume
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server with hot reload |
+| `npm run build` | Build static site to `dist/` |
+| `npm run preview` | Preview production build locally |
+| `npm run pdf` | Generate PDF from built site (requires `npm run build` first) |
+
+## Deployment
+
+Pushes to `main` automatically build and deploy to GitHub Pages via the workflow in `.github/workflows/deploy.yml`.
 
 Start the development server after building the stylesheet out of the Tailwind configuration:
 

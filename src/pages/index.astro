@@ -1,0 +1,27 @@
+---
+import ResumeLayout from "../layouts/ResumeLayout.astro";
+import Header from "../components/Header.astro";
+import Summary from "../components/Summary.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import Education from "../components/Education.astro";
+---
+
+<ResumeLayout
+  title="Jacob Lyle Lingo — Senior Software Engineer"
+  description="Senior Software Engineer with 6+ years building scalable data platforms, automation systems, and full-stack applications on GCP."
+>
+  <main class="mx-auto my-6 max-w-letter print:my-0 print:max-w-none">
+    <article
+      class="mx-auto overflow-hidden rounded-xl border border-gray-200 bg-white p-8 shadow-sm sm:p-10 md:p-14 print:rounded-none print:border-0 print:p-[0.5in] print:shadow-none"
+    >
+      <Header />
+      <Summary />
+      <Experience />
+      <Projects />
+      <Skills />
+      <Education />
+    </article>
+  </main>
+</ResumeLayout>

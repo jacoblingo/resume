@@ -1,0 +1,52 @@
+---
+const contacts = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/jacob-lingo-74792a152",
+    text: "jacob-lingo",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/jacoblingo",
+    text: "jacoblingo",
+  },
+  {
+    label: "Email",
+    href: "mailto:bluecuda@gmail.com",
+    text: "bluecuda@gmail.com",
+  },
+  {
+    label: "Location",
+    href: null,
+    text: "Remote / Cincinnati, OH",
+  },
+];
+---
+
+<header class="mb-5 border-b border-gray-200 pb-4">
+  <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+    Jacob Lyle Lingo
+  </h1>
+  <h2 class="mt-1 text-xl font-medium text-primary-700">
+    Senior Software Engineer
+  </h2>
+  <ul class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm text-gray-600">
+    {contacts.map((c) => (
+      <li class="flex items-center gap-1">
+        <span class="font-semibold text-gray-700">{c.label}:</span>
+        {c.href ? (
+          <a
+            href={c.href}
+            class="text-primary-600 hover:text-primary-800 hover:underline print:text-gray-700"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {c.text}
+          </a>
+        ) : (
+          <span>{c.text}</span>
+        )}
+      </li>
+    ))}
+  </ul>
+</header>

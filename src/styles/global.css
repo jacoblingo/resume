@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Jost-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Jost-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Jost-Bold.woff2") format("woff2");
+}
+
+@layer base {
+  html {
+    font-size: 14px;
+  }
+
+  @media print {
+    html {
+      font-size: 11.5px;
+    }
+
+    @page {
+      margin: 0;
+      size: letter;
+    }
+
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+
+  @media screen and (min-width: 833px) {
+    html {
+      font-size: 15px;
+    }
+  }
+}
